@@ -36,8 +36,10 @@ if st.button("Beregn"):
         months_saved = original_months - new_months
 
         st.subheader("Resultat:")
-        st.write(f"Du betaler **{original_interest:,.0f} kr** i renter med nåværende betaling.")
-        st.write(f"Du betaler **{new_interest:,.0f} kr** i renter med ekstra betaling.")
-        st.write(f"Du sparer **{saved_interest:,.0f} kr** i renter.")
-        st.write(f"Du betaler ned lånet **{months_saved} måneder** raskere.")
+        st.write(f"Uten ekstra betaling:")
+        st.write(f"Du betaler **{original_interest:,.0f} kr** i renter med vanlig betaling.")
+        st.write(f"Det vil ta **{original_months // 12} år og {original_months % 12} måneder** å betale ned lånet.")
+        st.write(f"Med ekstra betaling:")
+        st.write(f"Du betaler **{new_interest:,.0f} kr** i renter med ekstra betaling og sparer **{saved_interest:,.0f} kr**.")
+        st.write(f"Lånet betales ned **{months_saved // 12} år og {months_saved % 12} måneder** raskere.")
         st.write(f"Ny lånetid: **{new_months} måneder** ({new_months // 12} år og {new_months % 12} måneder).")
